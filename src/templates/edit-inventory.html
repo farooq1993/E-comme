@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Add Inventroy Quantity</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.css' %}">
+    <link rel="stylesheet"
+        href="{% static 'assets/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bundles/select2/dist/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bundles/jquery-selectric/selectric.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css' %}">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/components.css' %}">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    <link rel='shortcut icon' type='image/x-icon' href="{% static 'assets/img/favicon.png' %}" />
+</head>
+
+<body>
+    <!-- <div class="loader"></div> -->
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+                <div class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                  collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                        <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                                <i data-feather="maximize"></i>
+                            </a></li>
+                        <!-- <li>
+              <form class="form-inline mr-auto">
+                <div class="search-element">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </li> -->
+                    </ul>
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+                            class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+                            <span class="badge headerBadge1">
+                                6 </span> </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Messages
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-message">
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                      text-white"> <img alt="image" src="{% static 'assets/img/users/user-1.png' %}"
+                                            class="rounded-circle">
+                                    </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                                            Deo</span>
+                                        <span class="time messege-text">Please check your mail !!</span>
+                                        <span class="time">2 Min Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+                            class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Notifications
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-icons">
+                                <a href="#" class="dropdown-item dropdown-item-unread"> <span
+                                        class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                        fa-code"></i>
+                                    </span> <span class="dropdown-item-desc"> New Notification <span class="time">2 Min
+                                            Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
+                                src="{% static 'assets/img/user.png' %}" class="user-img-radious-style"> <span
+                                class="d-sm-none d-lg-inline-block"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right pullDown">
+                            <div class="dropdown-title">Hello User</div>
+                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+                    fa-user"></i> Profile
+                            </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+                                Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/logout" class="dropdown-item has-icon text-danger"> <i
+                                    class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="/dashboard"> <img alt="image" src="{% static 'assets/img/logo.png' %}"
+                                class="header-logo" /> <span class="logo-name">Unaga</span>
+                        </a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Modules</li>
+                        <li class="dropdown">
+                            <a href="/dashboard" class="nav-link"><i data-feather="grid"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="plus-square"></i><span>Categories</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_category">Add Category</a></li>
+                                <li><a class="nav-link" href="/view_category">View Categories</a></li>
+                                <li><a class="nav-link" href="/add_sub_category">Add Sub Category</a></li>
+                                <li><a class="nav-link" href="/view_sub_category">View Sub Categories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="layers"></i><span>Products</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_product">Add Product</a></li>
+                                <li><a class="nav-link" href="/view_product">View Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="shopping-cart"></i><span>Order Management</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_order">Add Orders</a></li>
+                                <li><a class="nav-link" href="/manage_order">Manage Orders</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="list"></i><span>Inventory</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/manage_inventory">Manage Inventories</a></li>
+                                <li><a class="nav-link" href="/view_damaged_list">View Damages List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="refresh-ccw"></i><span>Transfer</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_transfer">Transfer Branch Wise</a></li>
+                                <li><a class="nav-link" href="/manage_transfer">Manage Transfers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="package"></i><span>Wardrobe</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_wardrobe">Add Wardrobe</a></li>
+                                <li><a class="nav-link" href="/view_wardrobe">View Wardrobes</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="image"></i><span>Big
+                                    Banners</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_banner">Add Banner</a></li>
+                                <li><a class="nav-link" href="/view_banner">View Banners</a></li>
+                                <li><a class="nav-link" href="/add_leftbanner">Add Left-Banner</a></li>
+                                <li><a class="nav-link" href="/view_leftbanner">View Left-Banners</a></li>
+                                <li><a class="nav-link" href="/add_rightbanner">Add Right-Banner</a></li>
+                                <li><a class="nav-link" href="/view_rightbanner">View Right-Banners</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="image"></i><span>Latest Arrivals
+                                </span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_arrivals">Add Arrival</a></li>
+                                <li><a class="nav-link" href="/view_arrivals">View Arrival</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>User
+                                    Logins</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_customer">Add Customer</a></li>
+                                <li><a class="nav-link" href="/view_customer">Customers List</a></li>
+                                <li><a class="nav-link" href="/add_user">Add User</a></li>
+                                <li><a class="nav-link" href="/view_user">Users List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="flag"></i><span>Reports</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="#.">Orders Reports</a></li>
+                                <li><a class="nav-link" href="#.">Sales Reports</a></li>
+                                <li><a class="nav-link" href="#.">Earnings Reports</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="/logout"><i data-feather="log-out"></i><span>Logout</span></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <ul class="breadcrumb breadcrumb-style ">
+                        <li class="breadcrumb-item">
+                            <h4 class="page-title m-b-0">Add Quantity</h4>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard">
+                                <i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">Inventory</li>
+                        <li class="breadcrumb-item">Add Quantity</li>
+                    </ul>
+                    <div class="section-body">
+                        {% block content %}
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-12">
+                                <div class="card">
+                                    <!-- <div class="card-header">
+                    <h4>Input Text</h4>
+                  </div> -->
+                                    <form action="/edit_inventory/{{product.id}}" method="POST"
+                                        enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Product Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="product_name" name="product_name"
+                                                                    value="{{ product.product_name }}"
+                                                                    placeholder="Enter Product Name" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Product Code</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="product_code" name="product_code"
+                                                                    value="{{ product.product_code }}"
+                                                                    placeholder="12345" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Description</label>
+                                                                <textarea name="description" id="description"
+                                                                    class="form-control"
+                                                                    readonly>{{ product.description }}</textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Categories</label>
+                                                                <select id="categories" class="form-control"
+                                                                    name="categories" readonly>
+                                                                    <option value="{{ product.categories }}">
+                                                                        {{ product.categories }}</option>
+                                                                    {% for category in category %}
+                                                                    <option>{{ category.add_category }}</option>
+                                                                    {% endfor %}
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Sub Categories</label>
+                                                                <select id="sub_categories" class="form-control"
+                                                                    name="sub_categories" readonly>
+                                                                    <option value="{{ product.sub_categories }}">
+                                                                        {{ product.sub_categories }}</option>
+                                                                    {% for sub_category in sub_category %}
+                                                                    <option>{{ sub_category.add_sub_category }}</option>
+                                                                    {% endfor %}
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Brands </label>
+                                                                <input type="text" class="form-control" id="brands"
+                                                                    name="brands" value="{{ product.brands }}"
+                                                                    placeholder="Enter Brands" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Variant (Colors)</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="variant_color" name="variant_color"
+                                                                    placeholder="Enter Variant (Colors)"
+                                                                    value="{{ product.variant_color }}" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Sizes (Attributes)</label>
+                                                                <input type="text" class="form-control" id="sizes"
+                                                                    name="sizes" value="{{ product.sizes }}"
+                                                                    placeholder="Enter Sizes" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Unit price</label>
+                                                                <input type="text" class="form-control" id="unit_price"
+                                                                    name="unit_price" value="{{ product.unit_price }}"
+                                                                    placeholder="Enter Unit price" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Purchase price</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="purchase_price" name="purchase_price"
+                                                                    value="{{ product.purchase_price }}"
+                                                                    placeholder="Enter Purchase price" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Tax %</label>
+                                                                <input type="text" class="form-control" id="tax"
+                                                                    name="tax" value="{{ product.tax }}"
+                                                                    placeholder="Enter Tax %" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>GST %</label>
+                                                                <input type="text" class="form-control" id="gst"
+                                                                    name="gst" value="{{ product.gst }}"
+                                                                    placeholder="Enter GST %" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Discount</label>
+                                                                <input type="text" class="form-control" id="discount"
+                                                                    name="discount" value="{{ product.discount }}"
+                                                                    placeholder="Enter Discount" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Total Quantity</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="total_quantity" name="total_quantity"
+                                                                    value="{{ product.total_quantity }}"
+                                                                    placeholder="Enter Total Quantity" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Seo Meta Title</label>
+                                                                <input type="text" class="form-control" id="meta_title"
+                                                                    name="meta_title" value="{{ product.meta_title }}"
+                                                                    placeholder="Enter Total Quantity" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Meta Description</label>
+                                                                <textarea Required name="meta_description"
+                                                                    id="meta_description" class="form-control"
+                                                                    readonly>{{ product.meta_description }}</textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Add Quantity</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="add_quantity" name="add_qty"
+                                                                    placeholder="Add Quantity" onchange="Ad_qty()"
+                                                                    value="{{total}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Upload Images</label>
+                                                                <div class="row">
+                                                                    <div class="col-md-8">
+                                                                        <input type="file" class="form-control"
+                                                                            id="image1" name="image1" readonly>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        {% if product.image1 %}
+                                                                        <figure class="avatar avatar-lg">
+                                                                            <img src="{{ product.image1.url }}"
+                                                                                alt="image1">
+                                                                        </figure>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <input type="file" class="form-control"
+                                                                            id="image2" name="image2" readonly>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        {% if product.image2 %}
+                                                                        <figure class="avatar avatar-lg">
+                                                                            <img src="{{ product.image2.url }}"
+                                                                                alt="image2">
+                                                                        </figure>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <input type="file" class="form-control"
+                                                                            id="image3" name="image3" readonly>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        {% if product.image3 %}
+                                                                        <figure class="avatar avatar-lg">
+                                                                            <img src="{{ product.image3.url }}"
+                                                                                alt="image3">
+                                                                        </figure>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                    <div class="col-md-8">
+                                                                        <input type="file" class="form-control"
+                                                                            id="image4" name="image4" readonly>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        {% if product.image4 %}
+                                                                        <figure class="avatar avatar-lg">
+                                                                            <img src="{{ product.image4.url }}"
+                                                                                alt="image4">
+                                                                        </figure>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer text-right">
+                                                <button class="btn btn-outline-primary m1-3 mr-1"
+                                                    type="submit">Update</button>
+                                                <button class="btn btn-outline-success" type="reset">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {% endblock content %}
+                    </div>
+                </section>
+            </div>
+            <!-- footer starts -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    <a href="http://askmeguru.com" target="_blank">@2021, Unaga Clothing, All Rights Reserved. Designed
+                        By Askmeguru Technologies</a></a>
+                </div>
+                <div class="footer-right">
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="{% static 'assets/js/app.min.js' %}"></script>
+    <!-- JS Libraies -->
+    <script src="{% static 'assets/bundles/cleave-js/dist/cleave.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/cleave-js/dist/addons/cleave-phone.us.js' %}"></script>
+    <script src="{% static 'assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+    <script src="{% static 'assets/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/select2/dist/js/select2.full.min.js' %}"></script>
+    <script src="{% static 'assets/bundles/jquery-selectric/jquery.selectric.min.js' %}"></script>
+    <!-- Page Specific JS File -->
+    <script src="{% static 'assets/js/page/forms-advanced-forms.js' %}"></script>
+    <!-- Template JS File -->
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
+    <!-- Custom JS File -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script>
+
+        function Ad_qty() {
+            var tola_qty = document.getElementById("total_quantity").value;
+            var add_qty = document.getElementById("add_quantity").value;
+            var result = parseInt(tola_qty) + parseInt(add_qty)
+            document.getElementById("total_quantity").value = result;
+            console.log(result);
+
+            //alert("Hi farooq");
+        }
+    </script>
+
+</body>
+
+</html>

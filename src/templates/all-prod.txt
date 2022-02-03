@@ -1,0 +1,364 @@
+!-- item.2 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na2.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Hand Block Zari Border Mercerized Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.3 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na3.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Check Hand Block Corduroy Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.4 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na4.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Polka Pots Screen Print Cotton <br>Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.5 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na5.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Hand Block Zari Border Mercerized Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.6 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na6.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Creature Digital Print Modal Satin Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.7 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na7.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Creature Digital Print Modal Satin Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.8 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="new-label">New</div>
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/na8.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Creature Digital Print Modal Satin Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.9 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2a.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.10 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2b.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.11 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2c.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.12 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2d.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.13 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2e.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.14 -->
+                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="img/product-img/big/c2f.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="product-details.html" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Women Fashion</a>
+                                            <p class="product-title"><a href="product-details.html">Exclusive Digital Print Flex Cotton Fabric</a></p>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                            </div>
+                            <!-- End Product Grid -->
+
+                            <div class="pagination-wraper">
+                                <p>Showing 1 - 15 of 120 results</p>
+                                <div class="pagination">
+                                    <ul class="pagination-numbers">
+                                        <!--<li>
+                                            <a href="#" class="prev page-number"><i class="fa fa-angle-double-left"></i></a>
+                                        </li>-->
+                                        <li>
+                                            <a href="#" class="page-number current">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="page-number">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="page-number">3</a>
+                                        </li>
+                                        <li>
+                                            <span class="page-number dots">...</span>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="page-number">29</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="next page-number"><i class="fa fa-angle-double-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- End Product Content -->
+
+                    </div>
+                </div>
+            </section>
+            <!-- End Page Content -->
+
+        </div>
+        <!-- End Page Content Wraper -->
+
+        <!-- Footer Section -------------->
+        <footer class="footer section-padding">
+            <!-- Footer Info -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
+                        <div class="footer-block about-us-block">
+                            <img src="img/logo_footer.png" width="125" alt="">
+                            <p>At Unaga, we sell quality products and we ensure the products we sold are value for money. We have set ourselves bringing  best products that is trending in the market.</p>
+                            <ul class="footer-social-icon list-none-ib">
+                                <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block information-block">
+                            <h6>Information</h6>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <!--<li><a href="about-us.html">About Us</a></li>-->
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block links-block">
+                            <h6>Products</h6>
+                            <ul>
+                                <li><a href="all-products.html">Casual Cotton</a></li>
+                                <li><a href="all-products.html">Dye & Print Cotton</a></li>
+                                <li><a href="all-products.html">Cotton Combinations</a></li>
+                                <!-- <li><a href="#.">Handloom Cotton</a>
+                                    <ul class="mt-10">
+                                        <li><a href="#">- Khadi</a></li>
+                                        <li><a href="#">- Lenin</a></li>
+                                        <li><a href="#">- Ikat</a></li>
+                                        <li><a href="#">- Mangalgiri</a></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block extra-block">
+                            <h6>Shop Now</h6>
+                            <ul>
+                                <li><a href="#">ReadyMade</a></li>
+                                <li><a href="#">Customization</a></li>
+                                <li><a href="#">Wardrobe</a></li>
+                            </ul>
+                        </div>
+                    </div>

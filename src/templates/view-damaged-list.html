@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>View Damages - Unaga</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="assets/css/app.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.png' />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+                <div class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                  collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                        <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                                <i data-feather="maximize"></i>
+                            </a></li>
+                        <!-- <li>
+              <form class="form-inline mr-auto">
+                <div class="search-element">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="200">
+                  <button class="btn" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+            </li> -->
+                    </ul>
+                </div>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+                            class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+                            <span class="badge headerBadge1">
+                                6 </span> </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Messages
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-message">
+                                <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
+                      text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
+                                    </span> <span class="dropdown-item-desc"> <span class="message-user">John
+                                            Deo</span>
+                                        <span class="time messege-text">Please check your mail !!</span>
+                                        <span class="time">2 Min Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+                            class="nav-link notification-toggle nav-link-lg"><i data-feather="bell" class="bell"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-list dropdown-menu-right pullDown">
+                            <div class="dropdown-header">
+                                Notifications
+                                <div class="float-right">
+                                    <a href="#">Mark All As Read</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-list-content dropdown-list-icons">
+                                <a href="#" class="dropdown-item dropdown-item-unread"> <span
+                                        class="dropdown-item-icon bg-primary text-white"> <i class="fas
+                        fa-code"></i>
+                                    </span> <span class="dropdown-item-desc"> New Notification <span class="time">2 Min
+                                            Ago</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="dropdown-footer text-center">
+                                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                            class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image"
+                                src="assets/img/user.png" class="user-img-radious-style"> <span
+                                class="d-sm-none d-lg-inline-block"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right pullDown">
+                            <div class="dropdown-title">Hello User</div>
+                            <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+                    fa-user"></i> Profile
+                            </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+                                Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/logout" class="dropdown-item has-icon text-danger"> <i
+                                    class="fas fa-sign-out-alt"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="/dashboard"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span
+                                class="logo-name">Unaga</span>
+                        </a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Modules</li>
+                        <li class="dropdown">
+                            <a href="/dashboard" class="nav-link"><i data-feather="grid"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="plus-square"></i><span>Categories</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_category">Add Category</a></li>
+                                <li><a class="nav-link" href="/view_category">View Categories</a></li>
+                                <li><a class="nav-link" href="/add_sub_category">Add Sub Category</a></li>
+                                <li><a class="nav-link" href="/view_sub_category">View Sub Categories</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="layers"></i><span>Products</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_product">Add Product</a></li>
+                                <li class="active"><a class="nav-link" href="/view_product">View Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="shopping-cart"></i><span>Order Management</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_order">Add Orders</a></li>
+                                <li><a class="nav-link" href="/manage_order">Manage Orders</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="list"></i><span>Inventory</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/manage_inventory">Manage Inventories</a></li>
+                                <li><a class="nav-link" href="/view_damaged_list">View Damages List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="refresh-ccw"></i><span>Transfer</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_transfer">Transfer Branch Wise</a></li>
+                                <li><a class="nav-link" href="/manage_transfer">Manage Transfers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="package"></i><span>Wardrobe</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="/add_wardrobe">Add Wardrobe</a></li>
+                                <li><a class="nav-link" href="/view_wardrobe">View Wardrobes</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="image"></i><span>Big
+                                    Banners</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_banner">Add Banner</a></li>
+                                <li><a class="nav-link" href="/view_banner">View Banners</a></li>
+                                <li><a class="nav-link" href="/add_leftbanner">Add Left-Banner</a></li>
+                                <li><a class="nav-link" href="/view_leftbanner">View Left-Banners</a></li>
+                                <li><a class="nav-link" href="/add_rightbanner">Add Right-Banner</a></li>
+                                <li><a class="nav-link" href="/view_rightbanner">View Right-Banners</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="image"></i><span>Latest Arrivals
+                                </span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_arrivals">Add Arrival</a></li>
+                                <li><a class="nav-link" href="/view_arrivals">View Arrival</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="users"></i><span>User
+                                    Logins</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a class="nav-link" href="/add_customer">Add Customer</a></li>
+                                <li><a class="nav-link" href="/view_customer">Customers List</a></li>
+                                <li><a class="nav-link" href="/add_user">Add User</a></li>
+                                <li><a class="nav-link" href="/view_user">Users List</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                                    data-feather="flag"></i><span>Reports</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="#.">Orders Reports</a></li>
+                                <li><a class="nav-link" href="#.">Sales Reports</a></li>
+                                <li><a class="nav-link" href="#.">Earnings Reports</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="/logout"><i data-feather="log-out"></i><span>Logout</span></a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <ul class="breadcrumb breadcrumb-style ">
+                        <li class="breadcrumb-item">
+                            <h4 class="page-title m-b-0">View Damages</h4>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard">
+                                <i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">Damages</li>
+                        <li class="breadcrumb-item">View Damages</li>
+                    </ul>
+                    <div id="content-wrapper" class="d-flex flex-column">
+                        <div id="content">
+                            {% include 'messages.html' %}
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        {% block content %}
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <!-- <div class="card-header">
+                    <h4>Export Table</h4>
+                  </div> -->
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover" id="tableExport"
+                                                style="width:100%;">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sl No.</th>
+                                                        <th>Product Name</th>
+                                                        <th>Product Code</th>
+                                                        <th>Categories</th>
+                                                        <th>Sub Categories</th>
+                                                        <th>Total Qty</th>
+                                                        <th>Damaged Qty</th>
+                                                        <th style="padding-right: 140px;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for damage in damages %}
+                                                    <tr>
+                                                        <td>{{ damage.id }}</td>
+                                                        <td>{{ damage.product_name }}</td>
+                                                        <td>{{ damage.product_code }}</td>
+                                                        <td>{{ damage.categories }}</td>
+                                                        <td>{{ damage.sub_categories }}</td>
+                                                        <td>{{ damage.total_quantity }}</td>
+                                                        <td>{{ damage.damaged_quantity }}</td>
+                                                        <td>
+                                                            <a href="/edit_damaged_list/{{ damage.id }}"><button
+                                                                    type="button" class="btn btn-warning btn-sm">Edit |
+                                                                    View</button></a>
+                                                            <a href="/delete_damaged_list/{{ damage.id }}"><button
+                                                                    type="button" class="btn btn-danger btn-sm"
+                                                                    onclick="return confirm('Are you sure you want to delete this?')"><i
+                                                                        data-feather="trash-2"></i></button></a>
+                                                        </td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endblock content %}
+                    </div>
+                </section>
+            </div>
+            <!-- footer starts -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    <a href="http://askmeguru.com" target="_blank">@2021, Unaga Clothing, All Rights Reserved. Designed
+                        By Askmeguru Technologies</a></a>
+                </div>
+                <div class="footer-right">
+                </div>
+            </footer>
+            <!-- footer ends -->
+        </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="assets/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <!-- Page Specific JS File -->
+    <script src="assets/bundles/datatables/datatables.min.js"></script>
+    <script src="assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/bundles/datatables/export-tables/dataTables.buttons.min.js"></script>
+    <script src="assets/bundles/datatables/export-tables/buttons.flash.min.js"></script>
+    <script src="assets/bundles/datatables/export-tables/jszip.min.js"></script>
+    <script src="assets/bundles/datatables/export-tables/pdfmake.min.js"></script>
+    <script src="assets/bundles/datatables/export-tables/vfs_fonts.js"></script>
+    <script src="assets/bundles/datatables/export-tables/buttons.print.min.js"></script>
+    <script src="assets/js/page/datatables.js"></script>
+    <!-- Template JS File -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- Custom JS File -->
+    <script src="assets/js/custom.js"></script>
+    <!------------------------------------------------------------------------------------------------------------------------------------------->
+    <script>
+        setTimeout(function () {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 2000)
+    </script>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

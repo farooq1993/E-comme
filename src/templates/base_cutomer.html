@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Unaga Clothing - Home</title>
+    <!-- {% load static %} -->
+    <meta name="description" content="E-commerce" />
+    <meta name="keywords" content="E-commerce, fabrics, jeans, cotton, linen, nylon">
+    <meta name="author" content="Unaga" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/img/favicon.png' %}">
+    <link rel="icon" type="img/png" href="{% static 'website/img/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'website/img/favicon.png' %}">
+
+    <!-- CSS -->
+    <link href="{% static 'website/css/plugins/bootstrap.css' %}" rel="stylesheet" type="text/css" />
+    <!-- bootstrap css -->
+    <link href="{% static 'website/css/plugins/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+    <!-- fontawesome css -->
+    <link href="{% static 'website/css/plugins/animate.css' %}" rel="stylesheet" type="text/css" />
+    <!-- animate css -->
+    <link href="{% static 'website/css/customer.css' %}" rel="stylesheet" type="text/css" />
+    <!-- template css -->
+    <link href="{% static 'website/plugins/rev_slider/css/settings-ver.5.3.1.css' %}" rel="stylesheet"
+        type="text/css" />
+    <!-- Slider Revolution Css Setting -->
+
+</head>
+
+<body>
+
+    <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
+    <section id="sidebar-right" class="sidebar-menu sidebar-right">
+        <div class="cart-sidebar-wrap">
+
+            <!-- Cart Headiing -->
+            <div class="cart-widget-heading">
+                <h4>Shopping Cart</h4>
+                <!-- Close Icon -->
+                <a href="javascript:void(0)" id="sidebar_close_icon" class="close-icon-white"></a>
+                <!-- End Close Icon -->
+            </div>
+            <!-- End Cart Headiing -->
+
+            <!-- Cart Product Content -->
+            <div class="cart-widget-content">
+                <div class="cart-widget-product ">
+
+                    <!-- Empty Cart -->
+                    <div class="cart-empty d-block">
+                        <p>You have no items in your shopping cart.</p>
+                    </div>
+                    <!-- EndEmpty Cart -->
+
+                    <!-- Cart Products -->
+                    <ul class="cart-product-item">
+
+                        Item
+                        <li>
+                            {% for cart in cart %}
+                            <a href="{{ cart.image1.url }}" class="product-image">
+                                <img src="{{ cart.image1.url }}" alt="image" /></a>
+                            {% endfor %}
+
+                            <div class="product-content">
+
+                                <a class="product-link" href="#">Butterfly Pattern Loom Textured Cotton Fabric</a>
+
+                                <div class="cart-collateral">
+                                    <span class="qty-cart"></span>&nbsp;<span>&#215;</span>&nbsp;<span
+                                        class="product-price-amount"><span class="currency-sign">Rs.</span>399.00</span>
+                                </div>
+
+                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </li>
+
+                        <!-- Item -->
+                        <!--<li>-->
+                        <!--    <a href="#" class="product-image">-->
+                        <!--        <img src="img/product-img/small/cart2.jpg" alt="" /></a>-->
+
+                        <!--    <div class="product-content">-->
+                        <!--        <a class="product-link" href="#">Floral Loom Textured Cotton Fabric</a>-->
+
+                        <!--        <div class="cart-collateral">-->
+                        <!--            <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">Rs.</span>299.00</span>-->
+                        <!--        </div>-->
+
+                        <!--        <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>-->
+                        <!--    </div>-->
+                        <!--</li>-->
+
+                    </ul>
+                    <!-- End Cart Products -->
+
+                </div>
+            </div>
+            <!-- End Cart Product Content -->
+
+            <!-- Cart Footer -->
+            <div class="cart-widget-footer">
+                <div class="cart-footer-inner">
+
+                    <!-- Cart Total -->
+                    <h4 class="cart-total-hedding normal"><span>Total :</span><span
+                            class="cart-total-price">Rs.0.00</span></h4>
+                    <!-- Cart Total -->
+
+                    <!-- Cart Buttons -->
+                    <div class="cart-action-buttons">
+                        <a href="/cart" class="view-cart btn btn-md btn-gray">View Cart</a>
+                        <a href="/checkout" class="checkout btn btn-md btn-color">Checkout</a>
+                    </div>
+                    <!-- End Cart Buttons -->
+
+                </div>
+            </div>
+            <!-- Cart Footer -->
+        </div>
+    </section>
+    <!--Overlay-->
+    <div class="sidebar_overlay"></div>
+    <!-- End Sidebar Menu (Cart Menu) -------------------------------------------->
+
+    <!--==========================================-->
+    <!-- wrapper -->
+    <!--==========================================-->
+    <div class="wraper">
+        <!-- Header -->
+        <header class="header">
+            <!--Topbar-->
+            <div class="header-topbar">
+                <div class="header-topbar-inner">
+                    <!--Topbar Left-->
+                    <div class="topbar-left hidden-sm-down">
+                        <div class="phone"><i class="fa fa-phone left" aria-hidden="true"></i>Customer Support : <b>+91
+                                1234 567 890</b></div>
+                    </div>
+                    <!--End Topbar Left-->
+
+                    <!--Topbar Right-->
+                    <div class="topbar-right">
+                        <ul class="list-none">
+                            <li>
+                                <a href="/customer_login"><i class="fa fa-lock left" aria-hidden="true"></i><span
+                                        class="hidden-sm-down">Login</span></a>
+                            </li>
+                            <li class="dropdown-nav">
+                                <a href="#."><i class="fa fa-user left" aria-hidden="true"></i><span
+                                        class="hidden-sm-down">My Account</span><i class="fa fa-angle-down right"
+                                        aria-hidden="true"></i></a>
+                                <!--Dropdown-->
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <!-- <li><a href="#">Returns</a></li> -->
+                                        <li><a href="#">My Wishlist</a></li>
+                                        <li><a href="#">Checkout</a></li>
+                                    </ul>
+                                    <span class="divider"></span>
+                                    <ul>
+                                        <li><a href="/customer_login"><i class="fa fa-lock left"
+                                                    aria-hidden="true"></i>Login</a></li>
+                                        <!-- <li><a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i>Create an Account</a></li> -->
+                                    </ul>
+                                </div>
+                                <!--End Dropdown-->
+                            </li>
+                            <!-- <li>
+                                <a href="about.html">About</a>
+                            </li> -->
+                            <li>
+                                <a href="/customer_contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Topbar Right -->
+                </div>
+            </div>
+            <!--End Topbart-->
+
+            <!-- Header Container -->
+            <div id="header-sticky" class="header-main">
+                <div class="header-main-inner">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="/home">
+                            <img src="{% static 'website/img/logo_unaga.png' %}" alt="Unaga" />
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+
+
+                    <!-- Right Sidebar Nav -->
+                    <div class="header-rightside-nav">
+                        <!-- Login-Register Link -->
+                        <div class="header-btn-link hidden-lg-down"><a href="/customer_contact"
+                                class="btn btn-sm btn-color">Get In Touch</a></div>
+                        <!-- End Login-Register Link -->
+
+                        <!-- Sidebar Icon -->
+                        <div class="sidebar-icon-nav">
+                            <ul class="list-none-ib">
+                                <!-- Search-->
+                                <!-- <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a></li> -->
+
+                                <!-- Whishlist-->
+                                <li><a class="js_whishlist-btn"><i aria-hidden="true" class="fa fa-heart"></i>
+                                        <!--<span class="countTip">10</span>-->
+                                    </a></li>
+
+                                <!-- Cart-->
+                                <li><a id="sidebar_toggle_btn">
+                                        <div class="cart-icon">
+                                            <i aria-hidden="true" class="fa fa-shopping-bag"></i>
+                                        </div>
+
+                                        <!--<div class="cart-title">-->
+                                        <!--    <span class="cart-count">2</span>-->
+                                        <!--    /-->
+                                        <!--<span class="cart-price strong">Rs.698.00</span>-->
+                                        <!--</div>-->
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <!-- End Sidebar Icon -->
+                    </div>
+                    <!-- End Right Sidebar Nav -->
+
+
+                    <!-- Navigation Menu -->
+                    <nav class="navigation-menu">
+                        <ul>
+                            <li>
+                                <a href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'all_product' %}">Products</a>
+                                <!-- Drodown Menu ------->
+                                <ul class="nav-dropdown js-nav-dropdown">
+                                    <li class="container">
+                                        <ul class="row">
+                                            <!--Grid 1-->
+                                            <li class="nav-dropdown-grid">
+                                                <!-- <h6>COTTONS</h6> -->
+                                                <ul>
+                                                    <li><a href="{% url 'all_product' %}">
+                                                            <h6 class="mb-0">CASUAL COTTON</h6>
+                                                        </a></li>
+                                                    <li><a href="{% url 'all_product' %}">
+                                                            <h6 class="mb-0">DYE & PRINT COTTON</h6>
+                                                        </a></li>
+                                                    <li><a href="{% url 'all_product' %}">
+                                                            <h6>COTTON COMBINATIONS<span class="new-label">New</span>
+                                                            </h6>
+                                                        </a></li>
+                                                    <!-- <li><a href="#">COTTON FABRICS<span class="new-label">New</span></a></li> -->
+                                                </ul>
+                                            </li>
+                                            <!--Grid 2-->
+                                            <li class="nav-dropdown-grid">
+                                                <h6>HANDLOOM COTTON</h6>
+                                                <ul>
+                                                    <li><a href="{% url 'all_product' %}">Khadi</a></li>
+                                                    <li><a href="{% url 'all_product' %}">Lenin</a></li>
+                                                    <li><a href="{% url 'all_product' %}">Ikat</a></li>
+                                                    <li><a href="{% url 'all_product' %}">Mangalgiri</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--Grid 3-->
+                                            <!-- <li class="nav-dropdown-grid">
+                                                <h6>Plain Cotton</h6>
+                                                <ul>
+                                                    <li><a href="#">COTTON</a></li>
+                                                    <li><a href="#">KOTA DORIYA</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <!--Grid 4-->
+                                            <!-- <li class="nav-dropdown-grid">
+                                                <h6>Net</h6>
+                                                <ul>
+                                                    <li><a href="#">PLAIN NET</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li class="nav-dropdown-grid">
+                                                <a href="#" class="sub-banner">
+                                                    <img src="{% static 'website/img/banner/banner3.jpg' %}"
+                                                        alt="" /></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- End Drodown Menu -->
+                            </li>
+                            <!--<li>-->
+                            <!--    <a href="about-us.html">About Us</a>-->
+                            <!--</li>-->
+                            <li>
+                                <a href="/all_product_shop">Shop Now</a>
+                                <!-- Drodown Menu ------->
+                                <ul class="nav-dropdown js-nav-dropdown">
+                                    <li class="container">
+                                        <ul class="row">
+                                            <!--Grid 1-->
+                                            <li class="nav-dropdown-grid">
+                                                <h6 class="color-head">READYMADE</h6>
+                                                <ul class="mb-0">
+                                                    <li><a href="/all_product_shop">
+                                                            <h6 class="mb-0">CASUAL COTTON</h6>
+                                                        </a></li>
+                                                    <li><a href="/all_product_shop">
+                                                            <h6 class="mb-0">DYE & PRINT COTTON</h6>
+                                                        </a></li>
+                                                    <li><a href="/all_product_shop">
+                                                            <h6 class="mb-0">COTTON COMBINATIONS</h6>
+                                                        </a></li>
+                                                </ul>
+                                                <h6 class="mb-0">HANDLOOM COTTON<span class="new-label">4</span></h6>
+                                                <ul>
+                                                    <li><a href="/all_product_shop">Khadi</a></li>
+                                                    <li><a href="/all_product_shop">Lenin</a></li>
+                                                    <li><a href="/all_product_shop">Ikat</a></li>
+                                                    <li><a href="/all_product_shop">Mangalgiri</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--Grid 2-->
+                                            <li class="nav-dropdown-grid">
+                                                <h6 class="color-head">CUSTOMIZATION<span class="sale-label">New</span>
+                                                </h6>
+                                                <ul>
+                                                    <li><a href="/all_product_shop">ALL SAREES</a></li>
+                                                    <li><a href="/all_product_shop">SAREE WITH DESIGNER BLOUSE</a>
+                                                    </li>
+                                                    <li><a href="/all_product_shop">GEORGETTE SAREE</a></li>
+                                                    <li><a href="/all_product_shop">KOTA DORIYA SAREE</a></li>
+                                                    <li><a href="/all_product_shop">PLAIN SAREE</a></li>
+                                                </ul>
+                                            </li>
+                                            <!--Grid 3-->
+                                            <li class="nav-dropdown-grid">
+                                                <h6 class="color-head">WARDROBE</h6>
+                                                <ul>
+                                                    <li><a href="/all_product_shop">RED</a></li>
+                                                    <li><a href="/all_product_shop">BLUE</a></li>
+                                                    <li><a href="/all_product_shop">GREEN</a></li>
+                                                    <li><a href="/all_product_shop">YELLOW</a></li>
+                                                    <li><a href="/all_product_shop">WHITE</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-dropdown-grid">
+                                                <a href="#" class="sub-banner">
+                                                    <img src="{% static 'website/img/banner/banner2.jpg' %}"
+                                                        alt="" /></a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- End Drodown Menu -->
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End Navigation Menu -->
+
+                </div>
+            </div>
+            <!-- End Header Container -->
+        </header>
+        <!-- End Header -->
+
+        <!-- Page Content Wraper -->
+        <div class="page-content-wraper">
+            <!-- Intro -->
+            <section id="intro" class="intro">
+                <!-- Revolution Slider -->
+                <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"
+                    data-source="gallery" style="background-color: transparent; padding: 0px;">
+                    <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
+                    <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display: none;"
+                        data-version="5.3.0.2">
+
+                        <ul>
+                            {% for ban in banner %}
+                            <li data-index="rs-2" data-transition="random" data-slotamount="7" data-masterspeed="500"
+                                data-thumb="" data-saveperformance="off" data-title="02">
+                                <!-- Main Image Layer 0-->
+
+                                <img src="{{ ban.banner_image1.url }}" alt="slider-image2" title="home-1-slide-1"
+                                    width="1920" height="1200" data-bgposition="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+                                <!-- LAYERS -->
+                                <!--Layer 1-->
+                                <h1 class="tp-caption NotGeneric-Title tp-resizeme"
+                                    style="letter-spacing: 0px; line-height: 60px;" data-x="150" data-y="center"
+                                    data-hoffset="" data-voffset="-100" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="500" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on"><span class="text-white">Do You
+                                        Have</span><br />
+                                    <span class="text-white">Latest Kurtis?</span>
+                                </h1>
+
+
+                                <!--Layer 2-->
+                                <h3 class="tp-caption NotGeneric-Title tp-resizeme h3 normal "
+                                    style="letter-spacing: 0px;" data-x="150" data-y="center" data-hoffset=""
+                                    data-voffset="0" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="800" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on"><span class="text-white">Explore At
+                                        Unaga !</span>
+                                </h3>
+
+                                <!--Layer 3-->
+                                <a class="tp-caption NotGeneric-Title tp-resizeme btn btn-md btn-color" data-x="150"
+                                    data-y="center" data-hoffset="" data-voffset="75" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="1100" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">See More
+                                </a>
+
+
+                            </li>
+
+                            <li class="dark-bg" data-index="rs-1" data-transition="random" data-slotamount="7"
+                                data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="01">
+                                <!-- Main Image Layer 0-->
+                                <img src="{{ ban.banner_image2.url }}" alt="slider-image1" title="home-1-slide-1"
+                                    width="1920" height="1200" data-bgposition="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+
+
+                                <!--Layer 1-->
+                                <h1 class="tp-caption NotGeneric-Title tp-resizeme text-center"
+                                    style="letter-spacing: 0px; line-height: 60px;" data-x="center" data-y="center"
+                                    data-hoffset="" data-voffset="-100" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="500" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">Elegant Indian<br />
+                                    Wear 2021
+                                </h1>
+
+
+                                <!--Layer 2-->
+                                <h3 class="tp-caption NotGeneric-Title tp-resizeme h3 normal text-center"
+                                    style="letter-spacing: 0px;" data-x="center" data-y="center" data-hoffset=""
+                                    data-voffset="0" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="800" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">What's Trending Fashion?
+                                </h3>
+
+                                <!--Layer 3-->
+                                <a class="tp-caption NotGeneric-Title tp-resizeme btn btn-md btn-color" data-x="center"
+                                    data-y="center" data-hoffset="" data-voffset="75" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="1100" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">See More
+                                </a>
+
+
+                            </li>
+
+                            <li data-index="rs-3" data-transition="random" data-slotamount="7" data-masterspeed="500"
+                                data-thumb="" data-saveperformance="off" data-title="03">
+                                <!-- Main Image Layer 0-->
+                                <img src="{{ ban.banner_image3 }}" alt="slider-image3" title="home-1-slide-1"
+                                    width="1920" height="1100" data-bgposition="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+                                <!-- LAYERS -->
+
+                                <!--Layer 1-->
+                                <div class="tp-caption NotGeneric-Title tp-resizeme"
+                                    style="letter-spacing: 0px; line-height: 60px;" data-x="center" data-y="center"
+                                    data-hoffset="" data-voffset="-65" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="500" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">
+                                    <img src="{% static 'website/img/slider-caption-sale1.png' %}" alt=""
+                                        style="width: 100%; max-width: 682px;" />
+                                </div>
+
+                                <!--Layer 2-->
+                                <a class="tp-caption NotGeneric-Title tp-resizeme btn btn-md btn-black" data-x="center"
+                                    data-y="center" data-hoffset="" data-voffset="65" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="900" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">See More
+                                </a>
+                            </li>
+                            <li class="dark-bg" data-index="rs-4" data-transition="random" data-slotamount="7"
+                                data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="01">
+                                <!-- Main Image Layer 0-->
+                                <img src="{{ ban.banner_image4 }}" alt="slider-image4" title="home-1-slide-1"
+                                    width="1920" height="1200" data-bgposition="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+
+
+                                <!--Layer 1-->
+                                <h1 class="tp-caption NotGeneric-Title tp-resizeme text-center"
+                                    style="letter-spacing: 0px; line-height: 60px;" data-x="center" data-y="center"
+                                    data-hoffset="" data-voffset="-100" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="500" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">New Look<br />
+                                    Fashion 2021
+                                </h1>
+
+
+                                <!--Layer 2-->
+                                <h3 class="tp-caption NotGeneric-Title tp-resizeme h3 normal text-center"
+                                    style="letter-spacing: 0px;" data-x="center" data-y="center" data-hoffset=""
+                                    data-voffset="0" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="800" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">What's Trending Fashion?
+                                </h3>
+
+                                <!--Layer 3-->
+                                <a class="tp-caption NotGeneric-Title tp-resizeme btn btn-md btn-black" data-x="center"
+                                    data-y="center" data-hoffset="" data-voffset="75" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="1100" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">See More
+                                </a>
+
+
+                            </li>
+
+                            <li class="dark-bg" data-index="rs-5" data-transition="random" data-slotamount="7"
+                                data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="01">
+                                <!-- Main Image Layer 0-->
+                                <img src="{{ ban.banner_image5 }}" alt="slider-image5" title="home-1-slide-1"
+                                    width="1920" height="1200" data-bgposition="center center" data-bgfit="cover"
+                                    data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+
+
+                                <!--Layer 1-->
+                                <h1 class="tp-caption NotGeneric-Title tp-resizeme text-center"
+                                    style="letter-spacing: 0px; line-height: 60px;" data-x="center" data-y="center"
+                                    data-hoffset="" data-voffset="-100" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="500" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">If you Can't Stop<br />
+                                    Thinking About It.
+                                </h1>
+
+
+                                <!--Layer 2-->
+                                <h3 class="tp-caption NotGeneric-Title tp-resizeme h3 normal text-center"
+                                    style="letter-spacing: 0px;" data-x="center" data-y="center" data-hoffset=""
+                                    data-voffset="0" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="800" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">Buy It!
+                                </h3>
+
+                                <!--Layer 3-->
+                                <a class="tp-caption NotGeneric-Title tp-resizeme btn btn-md btn-black" data-x="center"
+                                    data-y="center" data-hoffset="" data-voffset="75" data-transform_idle="o:1;"
+                                    data-width="['auto','auto','auto','auto']"
+                                    data-height="['auto','auto','auto','auto']"
+                                    data-transform_in="y:50px;opacity:0;s:700;e:Power3.easeOut;"
+                                    data-transform_out="s:500;e:Power3.easeInOut;s:500;e:Power3.easeInOut;"
+                                    data-start="1100" data-speed="500" data-endspeed="500" data-splitin="none"
+                                    data-splitout="none" data-responsive_offset="on">See More
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- End Revolution Slider -->
+            </section>
+            <!-- End Intro -->
+
+            <!-- Promo Banner -->
+            <section id="promo-banner" class="section-padding-b pt-90">
+                <div class="container">
+                    <div class="row">
+                        <!--Left Side-->
+                        {% for leftbanner in leftbanners %}
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-12 mb-30">
+                                    <!-- banner No.1 -->
+                                    <div class="promo-banner-wrap">
+                                        <a href="#" class="promo-image-wrap" style="width: 600px; height: 267px;">
+                                            <img src="{{ leftbanner.leftbanner_image1 }}" alt="Accesories"
+                                                style="height: 267px; object-fit: cover;" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-sm-30">
+                                    <!-- banner No.2 -->
+                                    <div class="promo-banner-wrap">
+                                        <a href="#" class="promo-image-wrap" style="width: 600px; height: 470px;">
+                                            <img src="{{ leftbanner.leftbanner_image2 }}" alt="Accesories"
+                                                style="height: 470px; object-fit: cover;" />
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <!--Right Side-->
+                        {% for rightbanner in rightbanners %}
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-12 mb-30">
+                                    <!-- banner No.3 -->
+                                    <div class="promo-banner-wrap">
+                                        <a href="#" class="promo-image-wrap" style="width: 600px; height: 470px;">
+                                            <img src="{{ rightbanner.rightbanner_image1 }}" alt="Accesories"
+                                                style="height: 470px; object-fit: cover;" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-sm-30">
+                                    <!-- banner No.4 -->
+                                    <div class="promo-banner-wrap">
+                                        <a href="#" class="promo-image-wrap" style="width: 600px; height: 267px;">
+                                            <img src="{{ rightbanner.rightbanner_image2 }}" alt="Accesories"
+                                                style="height: 267px; object-fit: cover;" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <!-- End Promo Banner -->
+
+            <!-- Product (Tab with Slider) -->
+            <section class="section-padding" style="padding-top: 35px;padding-bottom: 65px;">
+                <div class="container">
+                    <h2 class="page-title">Top Interesting</h2>
+                </div>
+                <div class="container">
+                    <ul class="product-filter nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#casual" role="tab" data-toggle="tab">Casual Cotton</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dyeprint" role="tab" data-toggle="tab">Dye & Print Cotton</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#combinations" role="tab" data-toggle="tab">Cotton Combinations
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Tab1 - Latest Product -->
+                        <div id="casual" role="tabpanel" class="tab-pane fade in active">
+                            <div id="new-product" class="product-item-4 owl-carousel owl-theme nf-carousel-theme1">
+                                <!-- item.1 -->
+                                {% for product in products %}
+                                <div class="product-item">
+                                    <div class="product-item-inner">
+                                        <div class="new-label">New</div>
+                                        <div class="product-img-wrap" style="width: 255px; height: 350px;">
+                                            <img src="{{ product.image1 }}" alt=""
+                                                style="height: 350px; object-fit: cover;">
+                                        </div>
+                                        <div class="product-button">
+                                            <!-- <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                            <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a> -->
+                                            <a href="{% url 'product_details' product.id %}" class="js_tooltip"
+                                                data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <a class="tag" href="#">Women Fashion</a>
+                                        <p class="product-title"><a href="product-details.html">
+                                                {{ product.product_name }}</a></p>
+                                        <h5 class="item-price">RS.{{ product.purchase_price }}.00</h5>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Product (Tab with Slider) -->
+
+
+            <!-- latest arrivals -->
+            <section class="section-padding" style="padding-top: 35px; padding-bottom: 15px;">
+                <div class="container">
+                    <h2 class="page-title">Latest Arrivals</h2>
+                </div>
+                <div class="container">
+                    <div id="blog-carousel" class="blog-carousel owl-carousel owl-theme nf-carousel-theme1">
+                        <!-- item.1 -->
+                        {% for arrival in arrivals %}
+                        <div class="product-item">
+                            <div class="blog-box">
+                                <div class="blog-img-wrap" style="width: 540px; height: 540px;">
+                                    <img src="{{ arrival.arrival_img }}" alt="philos"
+                                        style="height: 540px; object-fit: cover;" />
+                                </div>
+                                <div class="blog-box-content">
+                                    <div class="blog-box-content-inner">
+                                        <h4 class="blog-title"><a href="product-details.html">
+                                                {{ arrival.arrival_content }}</a></h4>
+                                        <p class="info"><span>by <a href="#">Unaga Clothing</a></span><span>
+                                                {{ arrival.arrival_date }}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <!-- End latest arrivals -->
+
+
+            <!-- Like & Share Banner -->
+            <!--<section id="like-share" class="like-share">-->
+            <!--    <div class="container">-->
+            <!--        <div class="like-share-inner overlay-black40">-->
+            <!--            <h3><span class="color">100%</span> ORIGINAL guarantee for all products at unagaclothing.com </h3>-->
+            <!--            <ul class="social-icon">-->
+            <!--                <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+            <!--                <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+            <!--                <li><a href="https://pinterest.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</section>-->
+            <!-- End Like & Share Banner -->
+
+            <!-- Categories -->
+            <section class="section-padding-b">
+                <div class="section-padding container-fluid bg-image text-center" style="padding-top: 25px;">
+                    <div class="container">
+                        <h2 class="page-title">Shop by Categories</h2>
+                    </div>
+                </div>
+                <div class="container container-margin-minus-t">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="categories-box">
+                                <div class="categories-image-wrap">
+                                    <img src="{% static 'website/img/categories/fabric2.jpg' %}" alt="" />
+                                </div>
+                                <div class="categories-content">
+                                    <a href="all-products.html">
+                                        <div class="categories-caption">
+                                            <h6 class="normal">Casual Cotton</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="categories-box">
+                                <div class="categories-image-wrap">
+                                    <img src="{% static 'website/img/categories/suitdupa.jpg' %}" alt="" />
+                                </div>
+                                <div class="categories-content">
+                                    <a href="all-products.html">
+                                        <div class="categories-caption">
+                                            <h6 class="normal">Dye & Print Cotton</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="categories-box">
+                                <div class="categories-image-wrap">
+                                    <img src="{% static 'website/img/categories/suitdupa1.jpg' %}" alt="" />
+                                </div>
+                                <div class="categories-content">
+                                    <a href="all-products.html">
+                                        <div class="categories-caption">
+                                            <h6 class="normal">Cotton Combinations</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Categories -->
+
+
+            <!-- Newsletter -->
+
+            <section class="section-padding dark-bg container-fluid bg-image text-center overlay-black40"
+                data-background-img="{% static 'img/bg/bg_8.jpg' %}" data-bg-position-x="center top">
+                <div class="container newsletter section-padding-b">
+                    <h2 class="page-title">Connect To Us</h2>
+                    <form name="form-newsletter" class="newsletter-from" id="form-newsletter" method="post">
+                        <div class="form-input">
+                            <input class="input-lg" name="frmemail" id="frmemail" placeholder="Enter Email Address..."
+                                title="Enter Email Address..." type="text">
+                        </div>
+                        <button class="btn btn-lg btn-color">Submit</button>
+                    </form>
+                    <p class="italic">Sign up For Exclusive Updates, New Arrivals And Insider-Only Discount.</p>
+                </div>
+            </section>
+
+            <!-- Newsletter -->
+
+            <!-- About blocks -->
+            <section class="">
+                <div class="container container-margin-minus-t">
+                    <div class="home-about-blocks">
+                        <div class="col-12 about-blocks-wrap">
+                            <div class="row">
+                                <!--Customer Say-->
+                                <div class="col-sm-6 col-md-6 customer-say">
+                                    <div class="about-box-inner">
+                                        <h4 class="mb-25">Customer Say</h4>
+
+                                        <!--Customer Carousel-->
+                                        <div class="testimonials-carousel owl-carousel owl-theme nf-carousel-theme1">
+                                            <div class="product-item">
+                                                <p class="large quotes">Hi, recieved the maroon raw silk material just
+                                                    now. The color is very beautiful. Thank you so much.</p>
+                                                <h6 class="quotes-people">- Shilpa, Hyderabad</h6>
+                                            </div>
+                                            <div class="product-item">
+                                                <p class="large quotes">I recieved shibori material set today, the color
+                                                    is really good and it suits the fabric well. Thanx.</p>
+                                                <h6 class="quotes-people">- Divya, Hyderabad</h6>
+                                            </div>
+                                        </div>
+                                        <!--End Customer Carousel-->
+                                    </div>
+                                </div>
+
+                                <!--About Shop-->
+                                <div class="col-sm-6 col-md-6 about-shop">
+                                    <div class="about-box-inner">
+                                        <h4 class="mb-25">About Unaga Clothing</h4>
+                                        <p class="mb-20">Welcome to <b class="black">Unaga Clothing</b> - A unique
+                                            e-commerce platform for all the fabric needs, it may be for a daily wear or
+                                            may be for a grand wedding design or for a designer who want to make color
+                                            to his or her designs, wow!!! That’s the reason we are here.</p>
+                                        <a href="#" class="btn btn-xs btn-black">More <i
+                                                class="fa fa-angle-right right"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End About blocks -->
+        </div>
+        <!-- End Page Content Wraper -->
+
+        <!-- Footer Section -------------->
+        <footer class="footer section-padding">
+            <!-- Footer Info -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
+                        <div class="footer-block about-us-block">
+                            <img src="{% static 'website/img/logo_footer.png' %}" width="125" alt="">
+                            <p>At Unaga, we sell quality products and we ensure the products we sold are value for
+                                money. We have set ourselves bringing best products that is trending in the market.</p>
+                            <ul class="footer-social-icon list-none-ib">
+                                <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block information-block">
+                            <h6>Information</h6>
+                            <ul>
+                                <li><a href="/home">Home</a></li>
+                                <!-- <li><a href="about-us.html">About Us</a></li> -->
+                                <li><a href="/customer_contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block links-block">
+                            <h6>Products</h6>
+                            <ul>
+                                <li><a href="all-products.html">Casual Cotton</a></li>
+                                <li><a href="all-products.html">Dye & Print Cotton</a></li>
+                                <li><a href="all-products.html">Cotton Combinations</a></li>
+                                <!-- <li><a href="#.">Handloom Cotton</a>
+                                    <ul class="mt-10">
+                                        <li><a href="#">- Khadi</a></li>
+                                        <li><a href="#">- Lenin</a></li>
+                                        <li><a href="#">- Ikat</a></li>
+                                        <li><a href="#">- Mangalgiri</a></li>
+                                    </ul>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                        <div class="footer-block extra-block">
+                            <h6>Shop Now</h6>
+                            <ul>
+                                <li><a href="#">ReadyMade</a></li>
+                                <li><a href="#">Customization</a></li>
+                                <li><a href="#">Wardrobe</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="footer-block contact-block">
+                            <h6>Contact</h6>
+                            <ul>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Plot no 22/22A, 2nd floor,
+                                    Prashanth Nagar, Industrial Estate, Kukatpally, Hyderabad<br>Telangana, 500072</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a
+                                        href="mailto:info@unagaclothing.com">info@unagaclothing.com</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>+91-123456789</li>
+                                <!-- <li><i class="fa fa-fax" aria-hidden="true"></i>+91-123456789</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer Info -->
+
+            <!-- Footer Copyright -->
+            <div class="container pt-3">
+                <div class="copyrights">
+                    <p class="copyright">@ Unaga Clothing (2021). All Rights Reserved. Created by <a
+                            href="http://askmeguru.com/" target="_blank">Askmeguru Technologies</a>.</p>
+                </div>
+            </div>
+            <!-- End Footer Copyright -->
+        </footer>
+        <!-- End Footer Section -------------->
+
+    </div>
+    <!-- End wrapper =============================-->
+
+    <!--==========================================-->
+    <!-- JAVASCRIPT -->
+    <!--==========================================-->
+    <script type="text/javascript" src="{% static 'website/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'website/js/plugins/jquery-ui.js' %}"></script>
+    <!-- jquery library js -->
+    <script type="text/javascript" src="{% static 'website/js/plugins/modernizr.js' %}"></script>
+    <!--modernizr Js-->
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/revolution.extension.navigation.min.js' %}"></script>
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/revolution.extension.parallax.min.js' %}"></script>
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/revolution.extension.slideanims.min.js' %}"></script>
+    <script type="text/javascript"
+        src="{% static '/website/js/plugins/rev_slider/js/revolution.extension.layeranimation.min.js' %}"></script>
+    <!--Slider Revolution Js File-->
+    <script type="text/javascript" src="{% static 'website/js/plugins/tether.min.js' %}"></script>
+    <!--Bootstrap tooltips require Tether (Tether Js)-->
+    <script type="text/javascript" src="{% static 'website/js/plugins/bootstrap.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="{% static 'website/js/plugins/owl.carousel.js' %}"></script>
+    <!-- OWL carousel js -->
+    <script type="text/javascript" src="{% static 'website/js/plugins/slick.js' %}"></script>
+    <!-- Slick Slider js -->
+    <script type="text/javascript" src="{% static 'website/js/plugins/plugins-all.js' %}"></script>
+    <!-- Plugins All js -->
+    <script type="text/javascript" src="{% static 'website/js/customer.js' %}"></script>
+    <!-- custom js -->
+    <!-- end jquery -->
+
+
+
+
+</body>
+
+</html>
